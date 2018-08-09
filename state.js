@@ -9,6 +9,8 @@ var currentPlayingCard = null
 var state = {
   activeOverlay: null,
 
+  canPlay: false,
+
   testHand: [],
   // World
   worldRatio: getWorldRatio(),

@@ -1,7 +1,7 @@
 new Vue({   
     name: 'game',
     el: '#app',
-    template: `<div id="#app">
+    template: `<div id="#app" :class="cssClass">
         <top-bar :turn="turn" :current-player-index="currentPlayerIndex" :players="players" />
         <transition name="hand">
             <hand :cards="testHand" v-if="!activeOverlay" @card-play="testPlayCard" />
@@ -45,6 +45,11 @@ new Vue({
         }
     },
     computed: {
+        cssClass () {
+            return {
+                'can-play': this.canPlay
+            }
+        },
         testCard () {
             return cards.archers
         }

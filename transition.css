@@ -18,3 +18,7 @@
 .hand-leave-to .card {
     margin: 0 -100px;
 }
+
+.card-move {
+    transition: transform .3s;
+}
